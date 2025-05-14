@@ -28,9 +28,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2  # ✅ これに戻す（v2.0.0で明示）
+      - name: Upload artifact (manual)
+        uses: actions/upload-artifact@v4
         with:
+          name: site
           path: ./dist
 
   deploy:
@@ -43,5 +44,11 @@ jobs:
       pages: write
       id-token: write
     steps:
+      - name: Download artifact (manual)
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: .
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
