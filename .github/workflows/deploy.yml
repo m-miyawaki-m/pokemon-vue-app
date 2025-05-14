@@ -13,6 +13,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      artifact_name: ${{ steps.upload.outputs.artifact_name }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,7 +30,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Upload artifact (manual)
+      - name: Upload artifact
+        id: upload
         uses: actions/upload-artifact@v4
         with:
           name: site
@@ -39,12 +42,11 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: https://m-miyawaki-m.github.io/pokemon-vue-app/
     permissions:
       pages: write
       id-token: write
     steps:
-      - name: Download artifact (manual)
+      - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: site
