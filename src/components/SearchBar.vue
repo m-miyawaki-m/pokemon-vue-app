@@ -1,25 +1,30 @@
 <template>
   <v-row>
-    <!-- <v-col cols="8">
-      <v-text-field v-model="name" label="ポケモン名を入力" @keyup.enter="search" />
-    </v-col>
     <v-col cols="2">
-      <v-btn color="primary" block @click="search">検索</v-btn>
+      <v-text-field
+        v-model="searchInput"
+        label="ポケモン番号または名前"
+        density="compact"
+        @keyup.enter="onSearch"
+      />
+    </v-col>
+    <v-col cols="auto">
+      <v-btn color="primary" @click="onSearch">検索</v-btn>
+    </v-col>
+    <!-- <v-col cols="auto">
+      <v-btn color="secondary" @click="emit('random')">ランダム</v-btn>
     </v-col> -->
-    <v-col cols="2">
-      <v-btn color="secondary" block @click="$emit('random')">ランダム</v-btn>
-    </v-col>
   </v-row>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-const name = ref('')
 const emit = defineEmits(['search', 'random'])
 
-const search = () => {
-  if (name.value) {
-    emit('search', name.value)
-  }
+const searchInput = ref('')
+
+const onSearch = () => {
+  if (!searchInput.value) return
+  emit('search', searchInput.value)
 }
 </script>

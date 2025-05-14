@@ -1,17 +1,17 @@
 <template>
-  <v-container fluid class="pa-0 d-flex justify-start">
-    <v-card class="mt-4 pa-4" style="width: 320px;">
+  <v-container fluid class="pa-0 d-flex justify-start fill-height">
+    <v-card
+      class="mt-4 pa-4 fill-height d-flex flex-column justify-start"
+      style="width: 100%;"
+    >
       <v-card-title class="text-h5">
         {{ japaneseName || pokemon.name.toUpperCase() }}
       </v-card-title>
 
-      <v-img :src="pokemon.sprites.other['official-artwork'].front_default" height="200px" />
+      <v-img :src="pokemon.sprites.other['official-artwork'].front_default" height="100px" />
 
-      <v-card-text>
+      <v-card-text class="flex-grow-1 overflow-auto">
         <div><strong>全国図鑑番号:</strong> {{ pokemon.id }}</div>
-
-
-
 
         <v-list>
           <v-list-item v-for="stat in pokemon.stats" :key="stat.stat.name">
@@ -42,6 +42,7 @@
     </v-card>
   </v-container>
 </template>
+
 
 
 <script setup>
