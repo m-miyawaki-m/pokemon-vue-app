@@ -18,8 +18,8 @@
 
 <script setup>
 import { ref } from 'vue'
-import TabOneCard from './Tab/TabOneCard.vue'
-import TabTwoCard from './Tab/TabTwoCard.vue'
+import TabOneCard from './tabs/TabOneCard.vue'
+import TabTwoCard from './tabs/TabTwoCard.vue'
 
 const tab = ref('one')
 </script>
