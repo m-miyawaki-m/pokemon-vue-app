@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="primary" dark>
+    <v-app-bar app color="primary" height="64" dark>
     <!-- <v-toolbar-title>ヘッダー表示テスト</v-toolbar-title> -->
     <v-breadcrumbs :items="breadcrumbs" divider=">"/>
   </v-app-bar>

@@ -4,6 +4,7 @@ import ListView from '../views/ListView.vue'
 import PageB from '../views/PageB.vue'
 import PageWithTabs from '../views/PageWithTabs.vue'
 import Random from '../views/Random.vue'
+import SandBox from '../views/SandBox.vue'
 import Search from '../views/Search.vue'
 
 const routes = [
@@ -11,6 +12,7 @@ const routes = [
   { path: '/random', name: 'Random', component: Random },
   { path: '/search', name: 'Search', component: Search },
   { path: '/list', name: 'ListView', component: ListView },
+    { path: '/SandBox', name: 'SandBox', component: SandBox },
   { path: '/page-b', name: 'PageB', component: PageB },
   { path: '/tabs', name: 'PageWithTabs', component: PageWithTabs }
 ]
