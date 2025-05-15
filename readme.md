@@ -13,3 +13,8 @@ npm run dev
 ```
 npm install pinia pinia-plugin-persistedstate
 ```
+
+### Vue Router
+```
+dummy
+```
