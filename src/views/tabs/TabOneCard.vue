@@ -1,16 +1,17 @@
-<script setup>
-import { useTabStore } from '../../stores/useTabOneStore';
+<script setup lang="ts">
+import { useTabContentStore } from '../../stores/useTabContentStore';
 
-const store = useTabStore()
+const props = defineProps<{ tabId: string }>()
+const store = useTabContentStore(props.tabId)
 </script>
 
 <template>
   <v-card class="ma-4 pa-4">
-    <v-card-title>タブ1のカード</v-card-title>
+    <v-card-title>タブ {{ props.tabId }} のカード</v-card-title>
     <v-card-text>
       <v-text-field
         label="メモ"
-        v-model="store.tabOneText"
+        v-model="store.state.memo"
         placeholder="ここに入力..."
         outlined
       />

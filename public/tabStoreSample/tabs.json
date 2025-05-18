@@ -1,0 +1,12 @@
+[
+  {
+    "label": "タブ1",
+    "value": "one",
+    "component": "TabOneCard"
+  },
+  {
+    "label": "タブ2",
+    "value": "two",
+    "component": "TabTwoCard"
+  }
+]
