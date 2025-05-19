@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import BaseLayoutPage from '../views/BaseLayoutPage.vue'
 import HomeView from '../views/HomeView.vue'
 import ListView from '../views/ListView.vue'
 import PageB from '../views/PageB.vue'
@@ -12,7 +13,8 @@ const routes = [
   { path: '/random', name: 'Random', component: Random },
   { path: '/search', name: 'Search', component: Search },
   { path: '/list', name: 'ListView', component: ListView },
-    { path: '/SandBox', name: 'SandBox', component: SandBox },
+  { path: '/SandBox', name: 'SandBox', component: SandBox },
+  { path: '/BaseLayoutPage', name: 'BaseLayoutPage', component: BaseLayoutPage },
   { path: '/page-b', name: 'PageB', component: PageB },
   { path: '/tabs', name: 'PageWithTabs', component: PageWithTabs }
 ]

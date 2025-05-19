@@ -8,6 +8,7 @@
       <v-list-item to="/list" title="ポケモン一覧" prepend-icon="mdi-format-list-bulleted" />
       <v-list-item to="/tabs" title="タブページ" prepend-icon="mdi-tab" />
       <v-list-item to="/sandbox" title="サンドボックス" prepend-icon="mdi-tab" />
+      <v-list-item to="/BaseLayoutPage" title="ベースレイアウト" prepend-icon="mdi-tab" />
     </v-list>
   </v-navigation-drawer>
 </template>
